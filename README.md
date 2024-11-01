@@ -7,7 +7,6 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Current Status](#current-status)
-- [Data Structure](#data-structure)
 - [Coordinate Reference Systems (CRS)](#coordinate-reference-systems-crs)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -51,15 +50,22 @@ To ensure the highest spatial accuracy, each country's vector maps are provided 
 
 ## Getting Started
 
-
-### Prerequisites
-
-
 ### Installation
-
+```
+npm install https://github.com/sutigit/stat-map-provider.git
+```
 
 ### Usage
+**Importing**
+```
+import StatMap, { Country, AdministrativeLevel } from 'stat-map-provider';
+```
+**Example usage**
+```
+const municipalities = new StatMap(Country.FINLAND, AdministrativeLevel.MUNICIPALITY);
 
+const provinces = new StatMap(Country.FINLAND, AdministrativeLevel.PROVINCE);
+```
 
 
 ## Attributions
