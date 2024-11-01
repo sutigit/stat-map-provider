@@ -11,26 +11,21 @@ export enum AdministrativeLevel {
 }
 
 export default class StatMap {
-  maps: {
-    finland_municipalities: any;
-    finland_provinces: any;
-  };
+  private map: any;
 
-  constructor() {
-    this.maps = {
-      finland_municipalities,
-      finland_provinces
-    };
+  constructor(country: Country, level: AdministrativeLevel) {
+    this.map = this.create(country, level);
+    return this.map;
   }
 
-  get(country: Country, level: AdministrativeLevel) {
+  private create(country: Country, level: AdministrativeLevel) {
     switch (country) {
       case Country.FINLAND:
         switch (level) {
           case AdministrativeLevel.MUNICIPALITY:
-            return this.maps.finland_municipalities;
+            return finland_municipalities;
           case AdministrativeLevel.PROVINCE:
-            return this.maps.finland_provinces;
+            return finland_provinces;
           default:
             throw new Error('Invalid administrative level');
         }
