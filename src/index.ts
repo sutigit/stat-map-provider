@@ -10,7 +10,7 @@ export enum AdministrativeLevel {
   PROVINCE = 'PROVINCE'
 }
 
-export default class Main {
+export default class StatMap {
   maps: {
     finland_municipalities: any;
     finland_provinces: any;
