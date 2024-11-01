@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "sutigit",
   "license": "MIT",
-  "description": ""
+  "description": "An open-source collection of regional vector maps focusing on administrative divisions like provinces and municipalities, designed for compatibility with PxWeb API statistics. This project aims to provide free, high-quality educational assets through an easy-to-use interface. Please respect data sources and licenses as outlined in the attributions."
 }
