@@ -1,4 +1,4 @@
-import finland_municipalities from './maps/finland/municipalities/finland_municipalities.json';
+import finland_municipalities from './maps/finland/municipalities/finland_municipalities_4500k.json';
 import finland_provinces from './maps/finland/provinces/finland_provinces.json';
 
 export enum Country {
