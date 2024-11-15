@@ -1,54 +1,4 @@
-# Administrative Regional Divisions Vector Map Collection
-
-<!-- ![Project Logo](path/to/logo.png) -->
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Current Status](#current-status)
-- [Coordinate Reference Systems (CRS)](#coordinate-reference-systems-crs)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-<!-- - [Contributing](#contributing) -->
-<!-- - [License](#license) -->
-<!-- - [Contact](#contact) -->
-- [Attributions](#attributions)
-
-## Overview
-
-Thanks for viewing this project. This project serves as a collection of vector maps sourced from various countries, focusing on administrative regional divisions such as provinces and municipalities and compatibility with [PxWeb API](https://www.scb.se/en/services/statistical-programs-for-px-files/px-web/) statistics in mind. My goal is to provide open-source collection of regional vector maps to promote free and high-quality assets for educational purposes through an easy to use interface. Please always respect the data sources and licenses of the maps listed below at the [attributions](#attributions) section.
-
-## Features
-
-- **Accurate vector maps:** Currently only including Finland.
-- **Administrative regional divisions:** Country maps are divided by municipalities or provinces, for statistical showcasing of demographic data.
-- **PxWeb statistics compatible:** The GeoJSON format includes necessary and useful information that can be used together with data from PxWeb databases.
-- **Open Data:** All vector maps are sourced from platforms with creative commons licenses.
-- **Free to Use:** The project is entirely free, promoting widespread use and collaboration.
-- **GeoJSON Format:** Maps are provided in the versatile and widely-supported GeoJSON format, suitable for web applications, GIS software, and more.
-- **Optimized CRS:** Each map uses the most accurate Coordinate Reference System (CRS) for its respective country, enhancing spatial precision.
-
-## Current Status
-
-- **Initial Release:** Covers only Finland and can be used only in node projects.
-- **Map Types:** Provinces and municipalities
-- **Interface:** Node.js
-- **Growth:** Actively expanding to include additional countries and interface in multiple programming languages.
-
-
-## Coordinate Reference Systems (CRS)
-
-To ensure the highest spatial accuracy, each country's vector maps are provided in the most suitable CRS for that region. For instance:
-
-- **Finland:** Uses **EPSG:3067 (ETRS89 / TM35FIN)**, which is optimized for Finland's geography.
-- **Other Countries:** Will adopt their respective national CRS or the most accurate projection system available.
-
-> **Note:** While **EPSG:4326 (WGS 84)** is widely used globally, opting for country-specific CRS enhances the precision of spatial data, especially for detailed administrative boundaries.
-
-## Getting Started
+# stat-map-provider
 
 ### Installation
 ```
@@ -56,15 +6,10 @@ npm install https://github.com/sutigit/stat-map-provider.git
 ```
 
 ### Usage
-**Importing**
 ```
-import StatMap, { Country, AdministrativeLevel } from 'stat-map-provider';
-```
-**Example usage**
-```
-const municipalities = new StatMap(Country.FINLAND, AdministrativeLevel.MUNICIPALITY);
+import StatMap, { Country, AdministrativeLevel, ResolutionLevel } from 'stat-map-provider';
 
-const provinces = new StatMap(Country.FINLAND, AdministrativeLevel.PROVINCE);
+const mapjson = new StatMap(Country.FINLAND, AdministrativeLevel.MUNICIPALITY, ResolutionLevel.LEVEL_1);
 ```
 
 
